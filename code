@@ -1,0 +1,31 @@
+# trapping rain water
+
+
+def trap(height):
+        if height == []:
+            return 0
+        the_left = [0 for i in range(len(height))]
+        the_right = [0 for i in range(len(height))]
+        total = 0
+        
+        the_left[0] = height[0]
+        for i in range(1, len(height)):
+            the_left[i] = max(the_left[i-1], height[i])
+        
+        the_right[-1] = height[-1]
+        for i in range(len(height)-2, -1, -1):
+            the_right[i] = max(the_right[i+1], height[i])
+        
+        for i in range(len(height)): 
+            total += min(the_left[i], the_right[i]) - height[i] 
+  
+        return total
+
+height = [0,1,0,2,1,0,1,3,2,1,2,1]
+print(trap(height))
+#Output: 6    
+
+height = [4,2,0,3,2,5]
+print(trap(height))
+#Output: 9
+
