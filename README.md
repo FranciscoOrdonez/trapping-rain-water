@@ -80,7 +80,7 @@ So, for the input [0,1,0,2,1,0,1,3,2,1,2,1], the code would return 6, which is t
 Reasoning:
 
 The algorithm calculates the amount of trapped water in a histogram represented by the input array "height". Here's a step-by-step explanation for the example input [4,2,0,3,2,5]:
-If you want to see the code enter [here](code)
+
 
 1. Initialize two arrays, the_left and the_right, to store the maximum height from the left and the right for each element in the input array height. These arrays have the same length as the input array height.
 
